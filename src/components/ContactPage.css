@@ -1,0 +1,124 @@
+.custom-toast {
+  background-color: #202020f3 !important;
+  max-width: 300px;
+  width: auto;
+  margin-top: 8px;
+  margin-right: 8px;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.4) !important;
+  color: #fff !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.cheading {
+  margin: 0px 0px 0px 0px;
+}
+.crow {
+  margin-top: 100px;
+  margin-bottom: 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.cc1 {
+  flex-basis: 45%;
+}
+
+.cc2 {
+  flex-basis: 50%;
+  justify-items: center;
+}
+
+.socialIcon {
+  width: 20px;
+  margin-right: 20px;
+}
+.cr1 p {
+  margin-top: 24px;
+}
+
+.cr2 {
+  margin-top: 64px;
+}
+
+.cr2 p a {
+  text-decoration: none;
+}
+.contact-form {
+  background: rgba(15, 15, 15, 0.1);
+  border-radius: 10px;
+  padding: 32px 24px;
+  box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 72%;
+  justify-content: center; /* vertically center */
+  align-items: center;
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+}
+
+.form-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+  font-family: "Poppins";
+  font-size: 12px;
+  padding: 10px 0;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 8px;
+}
+
+.form-input:focus {
+  border-bottom-color: rgba(255, 255, 255, 1);
+}
+
+.send-button {
+  max-width: 200px;
+  width: 80%;
+  margin: 20px 0px;
+  height: 56px;
+  background: rgba(42, 42, 42, 0.15);
+  border: none;
+  border-radius: 10px;
+  font-family: "Poppins";
+  font-size: 12px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-button:hover {
+  background: rgba(42, 42, 42, 0.3);
+  box-shadow: 4px 4px 15px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 900px) {
+  .cheading {
+    font-size: 30px;
+  }
+  .crow {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .contact-form {
+    margin-top: 64px;
+    width: 100%;
+    max-width: 480px;
+  }
+}

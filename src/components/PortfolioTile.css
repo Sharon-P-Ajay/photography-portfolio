@@ -1,0 +1,33 @@
+.portfolio-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tile-image {
+  width: 360px;
+  height: 640px;
+  object-fit: cover;
+  border-radius: 1px;
+}
+
+.tile-title {
+  text-transform: capitalize;
+}
+
+.portfolio-tile:hover {
+  transform: translateY(-2px);
+  .tile-image {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.753);
+  }
+}
+
+@media (max-width: 900px) {
+  .tile-image {
+    width: 320px;
+    height: 568px;
+  }
+}
