@@ -1,10 +1,20 @@
 import React, { useRef } from "react";
 import "./PortfolioPage.css";
+
+import { useNavigate } from "react-router-dom";
 import PortfolioTile from "./PortfolioTile";
 
 const PortfolioPage = () => {
   const scrollRef = useRef(null);
 
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    // Convert title to lowercase and navigate
+    window.scrollTo(0, 0);
+
+    navigate(`/portfolio/All Albums`);
+  };
   const handleMouseDown = (e) => {
     const slider = scrollRef.current;
     slider.isDown = true;
@@ -67,7 +77,9 @@ const PortfolioPage = () => {
           <PortfolioTile image={"2.jpg"} title="Latest" />
         </div>
         <div className="pb">
-          <button className="portfolio-btn">All Albums →</button>
+          <button className="portfolio-btn" onClick={handleClick}>
+            All Albums →
+          </button>
         </div>
       </div>
     </section>
