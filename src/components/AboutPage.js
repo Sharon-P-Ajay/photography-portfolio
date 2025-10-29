@@ -10,7 +10,7 @@ const AboutPage = () => {
             <h2 className="headings">ABOUT ME</h2>
             <p className="content">
               I'm Sharon P Ajay, a Software Developer who's passionate about
-              photography and videography and editing.
+              photography, videography and editing.
             </p>
           </div>
           <div className="col2">

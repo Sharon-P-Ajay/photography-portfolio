@@ -72,9 +72,8 @@ const PortfolioPage = () => {
         >
           <PortfolioTile image={"1.jpg"} title="Best" />
           <PortfolioTile image={"2.jpg"} title="Latest" />
-          <PortfolioTile image={"3.jpg"} title="Food" />
-          <PortfolioTile image={"1.jpg"} title="Best" />
-          <PortfolioTile image={"2.jpg"} title="Latest" />
+          <PortfolioTile image={"3.jpg"} title="Favorites" />
+          <PortfolioTile image={"1.jpg"} title="Events" />
         </div>
         <div className="pb">
           <button className="portfolio-btn" onClick={handleClick}>

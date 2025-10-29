@@ -6,6 +6,26 @@ const Gallery = () => {
   const { collectionName } = useParams();
   const navigate = useNavigate();
 
+  let imageCount, folder;
+  if (collectionName.toLowerCase() === "best") {
+    imageCount = 5;
+    folder = "best";
+  } else if (collectionName.toLowerCase() === "latest") {
+    imageCount = 4;
+    folder = "latest";
+  } else if (collectionName.toLowerCase() === "all albums") {
+    imageCount = 5;
+    folder = "all albums";
+  } else {
+    imageCount = 5;
+    folder = "all albums";
+  }
+
+  const images = Array.from(
+    { length: imageCount },
+    (_, i) => `${process.env.PUBLIC_URL}/albums/${folder}/${i + 1}.jpg`
+  );
+
   return (
     <section id="gallerysection" className="section-gallery">
       <div className="gheadingdiv">
@@ -21,53 +41,15 @@ const Gallery = () => {
           />
         </div>
       </div>
-
       <div className="gallery">
-        <img
-          className="gallery1"
-          src={`${process.env.PUBLIC_URL}/2.jpg`}
-          alt="1"
-        />
-        <img
-          className="gallery1"
-          src={`${process.env.PUBLIC_URL}/4.jpg`}
-          alt="1"
-        />
-        <img
-          className="gallery1"
-          src={`${process.env.PUBLIC_URL}/3.jpg`}
-          alt="1"
-        />
-        <img
-          className="gallery1"
-          src={`${process.env.PUBLIC_URL}/3.jpg`}
-          alt="1"
-        />
-        <img
-          className="gallery1"
-          src={`${process.env.PUBLIC_URL}/4.jpg`}
-          alt="1"
-        />
-        <img
-          className="gallery1"
-          src={`${process.env.PUBLIC_URL}/5.jpg`}
-          alt="1"
-        />
-        <img
-          className="gallery1"
-          src={`${process.env.PUBLIC_URL}/4.jpg`}
-          alt="1"
-        />
-        <img
-          className="gallery1"
-          src={`${process.env.PUBLIC_URL}/2.jpg`}
-          alt="1"
-        />
-        <img
-          className="gallery1"
-          src={`${process.env.PUBLIC_URL}/5.jpg`}
-          alt="1"
-        />
+        {images.map((img, index) => (
+          <img
+            key={index}
+            className="gallery1"
+            src={img}
+            alt={`${folder}${index}`}
+          />
+        ))}
       </div>
     </section>
   );
