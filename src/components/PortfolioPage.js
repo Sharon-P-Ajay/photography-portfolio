@@ -70,10 +70,12 @@ const PortfolioPage = () => {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          <PortfolioTile image={"1.jpg"} title="Best" />
           <PortfolioTile image={"2.jpg"} title="Latest" />
           <PortfolioTile image={"3.jpg"} title="Favorites" />
           <PortfolioTile image={"1.jpg"} title="Events" />
+          <PortfolioTile image={"2.jpg"} title="Portraits " />
+          <PortfolioTile image={"2.jpg"} title="Landscapes " />
+          <PortfolioTile image={"2.jpg"} title="Cafes & interiors " />
         </div>
         <div className="pb">
           <button className="portfolio-btn" onClick={handleClick}>
