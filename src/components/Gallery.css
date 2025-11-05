@@ -40,24 +40,38 @@
   top: 2%;
   right: 2%;
   display: block;
+  z-index: 2;
 }
 .pn {
   width: 32px;
   opacity: 0%;
   transition: opacity 0.4s ease;
 }
-.lightbox-overlay:hover .pn {
-  opacity: 100%;
-  transition: opacity 0.4s ease;
+.prevcontainer {
+  position: fixed;
+  max-width: 240px;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
+.nextcontainer {
+  position: fixed;
+  max-width: 240px;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
 .lightboxprev {
   position: fixed;
-  top: 44vh;
+  top: 42vh;
   left: 24px;
 }
 .lightboxnext {
   position: fixed;
-  top: 44vh;
+  top: 42vh;
   right: 24px;
 }
 
@@ -79,7 +93,16 @@
   max-height: 90%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
-
+@media (hover: hover) {
+  .prevcontainer:hover .lightboxprev {
+    opacity: 100%;
+    transition: opacity 0.4s ease;
+  }
+  .nextcontainer:hover .lightboxnext {
+    opacity: 100%;
+    transition: opacity 0.4s ease;
+  }
+}
 @media (max-width: 1200px) {
   .gallery {
     column-count: 3;
@@ -96,5 +119,8 @@
   }
   .galleryclose {
     width: 28px;
+  }
+  .lightboxclose {
+    width: 32px;
   }
 }

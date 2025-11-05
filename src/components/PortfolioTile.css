@@ -9,7 +9,7 @@
 
 .tile-image {
   width: 360px;
-  height: 640px;
+  height: 540px;
   object-fit: cover;
   border-radius: 1px;
 }
@@ -28,6 +28,6 @@
 @media (max-width: 900px) {
   .tile-image {
     width: 320px;
-    height: 568px;
+    height: 480px;
   }
 }

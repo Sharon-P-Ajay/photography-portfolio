@@ -1,11 +1,14 @@
+#portfoliosection {
+  padding-top: 72px;
+}
 .pheading {
-  margin: 72px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
 }
 
 .portfolio-grid {
   display: flex;
   justify-content: flex-start;
-  gap: 48px;
+  gap: 24px;
   overflow: hidden;
   cursor: grab;
   user-select: none;
@@ -48,12 +51,12 @@
     font-size: 30px;
   }
   .portfolio-grid {
-    gap: 32px;
+    gap: 20px;
     padding: 56px 0px 24px 0px;
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 480px) {
   .portfolio-grid {
     flex-direction: column;
     justify-content: center;

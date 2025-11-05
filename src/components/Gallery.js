@@ -127,16 +127,19 @@ const Gallery = () => {
             alt="close"
             onClick={closeImage}
           />
-
-          <img
-            className="lightboxprev pn"
-            src={`${process.env.PUBLIC_URL}/prev.png`}
-            alt="prev"
+          <div
+            className="prevcontainer"
             onClick={(e) => {
               e.stopPropagation();
               showPrev();
             }}
-          />
+          >
+            <img
+              className="lightboxprev pn"
+              src={`${process.env.PUBLIC_URL}/prev1.png`}
+              alt="prev"
+            />
+          </div>
 
           <img
             className="lightbox-image"
@@ -144,15 +147,19 @@ const Gallery = () => {
             alt="Large view"
             onClick={(e) => e.stopPropagation()}
           />
-          <img
-            className="lightboxnext pn"
-            src={`${process.env.PUBLIC_URL}/next.png`}
-            alt="next"
+          <div
+            className="nextcontainer"
             onClick={(e) => {
               e.stopPropagation();
               showNext();
             }}
-          />
+          >
+            <img
+              className="lightboxnext pn"
+              src={`${process.env.PUBLIC_URL}/next1.png`}
+              alt="next"
+            />
+          </div>
         </div>
       )}
     </section>
