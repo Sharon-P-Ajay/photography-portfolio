@@ -5,7 +5,7 @@
 
 body {
   /* Use the image from public/ */
-  background-image: url("../public/background\ sample\ 1.jpg");
+  background-image: url("../public/background\ sample\ 4.jpg");
   background-attachment: fixed; /* keeps image fixed while scrolling (desktop) */
   background-size: cover;
   background-position: center center;

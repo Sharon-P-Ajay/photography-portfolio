@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./Gallery.css";
 
@@ -26,13 +26,14 @@ const Gallery = () => {
     (_, i) => `${process.env.PUBLIC_URL}/albums/${folder}/${i + 1}.jpg`
   );
 
-  const shuffledImages = images
+  /*const shuffledImages = images
     .map((img) => ({ img, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
-    .map(({ img }) => img);
+    .map(({ img }) => img);*/
 
   const reversedImages = [...images].reverse();
   const [selectedImage, setSelectedImage] = useState(null);
+  // eslint-disable-next-line no-unused-vars
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const openImage = (index) => {
@@ -42,22 +43,22 @@ const Gallery = () => {
 
   const closeImage = () => setSelectedImage(null);
 
-  const showNext = () => {
+  const showNext = useCallback(() => {
     setCurrentIndex((prev) => {
       const newIndex = (prev + 1) % reversedImages.length;
       setSelectedImage(reversedImages[newIndex]);
       return newIndex;
     });
-  };
+  }, [reversedImages]);
 
-  const showPrev = () => {
+  const showPrev = useCallback(() => {
     setCurrentIndex((prev) => {
       const newIndex =
         (prev - 1 + reversedImages.length) % reversedImages.length;
       setSelectedImage(reversedImages[newIndex]);
       return newIndex;
     });
-  };
+  }, [reversedImages]);
 
   useEffect(() => {
     const handleKey = (e) => {
@@ -68,7 +69,7 @@ const Gallery = () => {
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [selectedImage]);
+  }, [selectedImage, showNext, showPrev]);
 
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);

@@ -16,7 +16,6 @@
   display: block;
   width: 100%;
   margin-bottom: 16px;
-  border-radius: 2px;
 }
 
 .gheading {
@@ -54,6 +53,7 @@
   height: 100%;
   top: 0;
   left: 0;
+  user-select: none;
 }
 .nextcontainer {
   position: fixed;
@@ -62,6 +62,7 @@
   height: 100%;
   top: 0;
   right: 0;
+  user-select: none;
 }
 
 .lightboxprev {

@@ -21,7 +21,7 @@ const ContactPage = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(
+      await fetch(
         "https://script.google.com/macros/s/AKfycbxSElCozCspw67sNxCDbQ5KgnNd2AZ6m1InBJ4sP6975LHv7HfLujS5XGQZ7pPgUg7p/exec",
         {
           method: "POST",
